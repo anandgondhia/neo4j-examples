@@ -1,0 +1,20 @@
+README
+=======
+
+This project generates random data for 3 entities. Financial Assets, Customers that own these assets and the portfolios where these assets are stored in
+It creates 3 tables (ASSET, PORTFOLIO and CUSTOMER) in SQLite embedded database
+
+Gradle build:
+-------------
+clean build
+
+Run time arguments
+------------------
+<no of assets> <no of customers> <no of portlfolios>
+
+ex:  '100 200 150'
+
+View Data
+-----------
+AssetDataGenerator Utility generates data and inserts in SQLite DB and creates stockdb.sqlite file. You can open this file in SQLite browser to view the data
+

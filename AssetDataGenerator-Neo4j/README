@@ -14,6 +14,11 @@ Run time arguments
 
 ex:  '100 200 150'
 
+This project was built using Eclipse. Eclipse run configuration can be translated to command line:
+
+java -cp AssetDataGenerator-Neo4j/build/libs/AssetDataGenerator-Neo4j.jar -Xmx1024m com.app.demo.DataGenerator  100000 10000 10000
+
+
 View Data
 -----------
 DataGenerator Utility generates data and inserts in Neo4j embedded DB. It creates  data\graph.db directory. This directory can be moved to a standalone Neo4j Server in case you want to view the data

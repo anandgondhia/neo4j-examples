@@ -1,0 +1,21 @@
+README
+=======
+
+This project generates random data for 3 entities. Financial Assets, Customers that own these assets and the portfolios where these assets are stored in
+It creates 3 set of entities in Neo4j. For simplicity purpose Only Asset DAO is enabled and Customer and portfolios are disabled.It doesnt use ogm and uses only plain Cypher queries. 
+
+Gradle build:
+-------------
+clean build
+
+Run time arguments
+------------------
+<no of assets> <no of customers> <no of portlfolios>
+
+ex:  '100 200 150'
+
+View Data
+-----------
+DataGenerator Utility generates data and inserts in Neo4j embedded DB. It creates  data\graph.db directory. This directory can be moved to a standalone Neo4j Server in case you want to view the data
+in neo browser. 
+

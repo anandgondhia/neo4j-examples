@@ -14,6 +14,11 @@ Run time arguments
 
 ex:  '100 200 150'
 
+This project was built using Eclipse. Eclipse run configuration can be translated to command line:
+
+java -cp AssetDataGenerator-Sqlite/build/libs/AssetDataGenerator-Sqlite.jar -Xmx1024m com.app.demo.AssetDataGenerator  100000 10000 10000
+
+
 View Data
 -----------
 AssetDataGenerator Utility generates data and inserts in SQLite DB and creates stockdb.sqlite file. You can open this file in SQLite browser to view the data

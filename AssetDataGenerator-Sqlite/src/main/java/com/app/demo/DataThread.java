@@ -107,7 +107,7 @@ public class DataThread {
 
 	public void run() {
 		populateAsset();
-		populateCustomer();
-		populatePortfolio();
+		//populateCustomer();
+		//populatePortfolio();
 	}
 }

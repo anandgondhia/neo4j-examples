@@ -11,7 +11,7 @@ import com.app.demo.util.DBUtils;
 
 @Service
 public class AssetDAO {
-	static int assetCounter = 1;
+	//static int assetCounter = 1;
 	@Autowired
 	GraphDatabaseService graphDatabaseService;
 	
@@ -20,20 +20,16 @@ public class AssetDAO {
 		String cql = "CREATE (" + asset.getName() + ":Asset { id:" + asset.getId() + ",name:'" + asset.getName() + "', type:'" + asset.getType() + "'})";
 		Transaction tx = graphDatabaseService.beginTx();
 		graphDatabaseService.execute(cql);
-		assetCounter++;
-		//if(assetCounter % 1000 == 0 || assetCounter == DBUtils.numberOfAsset) {
+		tx.success();
+		tx.close();		
+		/*assetCounter++;
 		if(assetCounter == 1 || assetCounter == DBUtils.numberOfAsset) {
 			tx.success();
-			
-	        System.out.println("*****Match N query*****");
-	        cql = "MATCH (n:Asset) RETURN n";
-	        Result r = graphDatabaseService.execute(cql);
-	        //System.out.println(r.resultAsString());
+			tx.close();
 	        if(assetCounter == DBUtils.numberOfAsset) {
 	        	tx.close();
 	        }
-		}
-		
+		}*/		
 	}
 	
 	public void countAsset() {
